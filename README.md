@@ -34,52 +34,26 @@ Demo Application
         remove-user-role: Remove role from a user
 
 
-shell:>add-system-resource re1
-invoking addResource method
-shell:>add-system-resource re2
-invoking addResource method
-shell:>add-system-resource re3
-invoking addResource method
-shell:>
-shell:>
-shell:>
-shell:>
-shell:>add-user-role suraj Role1
-invoking assignRoleToUser method
-shell:>add-user-role suraj2 Role2
-invoking assignRoleToUser method
-shell:>add-user-role suraj3 Role3
-invoking assignRoleToUser method
-shell:>add-user-resource suraj re1
-invoking assignResourceToUser method
-shell:>add-user-resource suraj2 re2
-invoking assignResourceToUser method
-shell:>add-user-resource suraj3 re3
-invoking assignResourceToUser method
-shell:>have-access suraj 2 re1
-invoking isUserHavingAccess method
-true
-shell:>have-access suraj2 2 re2
-invoking isUserHavingAccess method
-false
-shell:>have-access suraj2 1 re2
-invoking isUserHavingAccess method
-true
-shell:>have-access suraj2 5 re2
-invoking isUserHavingAccess method
-false
-shell:>have-access suraj2 78326467 re2
-invoking isUserHavingAccess method
-false
-shell:>have-access suraj2 32452345 re2
-invoking isUserHavingAccess method
-false
-shell:>have-access suraj2 1 re1
-invoking isUserHavingAccess method
-User does not have permission to access this resource:[re1]
-false
-shell:>
-shell:>
-shell:>
-shell:>
-shell:>exit
+Role Based Access Control:
+
+Implement a role based auth system. System should be able to assign a role to user and remove a user from the role.
+
+Entities are USER, ACTION TYPE, RESOURCE, ROLE
+
+ACTION TYPE defines the access level(Ex: READ, WRITE, DELETE)
+
+Access to resources for users are controlled strictly by the role.One user can have multiple roles. Given a user, action type and resource system should be able to tell whether user has access or not.
+
+
+
+Please list down the assumptions made. Scope out things if you feel this takes more than 3 hours and add them to assumptions.
+
+Note:
+
+1. Use any object oriented programming language.
+
+2. Code should be maintainable and production ready
+
+3. Follow the best practices of engineering and design patterns.
+
+4. A command line application with in memory models will suffice, a REST API or DBs are not required.
